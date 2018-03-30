@@ -10,10 +10,10 @@ alias py3='source /reg/g/pcds/pyps/conda/py36env.sh'
 alias emacs='emacs -nw'
 
 # cd to my emacs backup dir
-alias emacsbak='cd /reg/neh/home4/rajan-01/.emacs.d/emacs-backup/'
+alias emacsbak='cd /reg/neh/home/rajan-01/.emacs.d/emacs-backup/'
 
 # Opens this file
-alias raj='emacs /reg/neh/home4/rajan-01/.bashrc'
+alias raj='emacs /reg/neh/home/rajan-01/raj/bashrc'
 
 # Opens my bash history
 alias rajhistory='emacs ~/.bash_history'
@@ -61,8 +61,8 @@ alias mfxopr='ssh mfxopr@mfx-control'
 
 # PS machines
 alias psrelay='ssh -x rajan-01@psrelay'
-alias psbuildrhel5='ssh -x rajan-01@psbuild-rhel5'
-alias psbuildrhel7='ssh -x rajan-01@psbuild-rhel7'
+alias psb5='ssh -x rajan-01@psbuild-rhel5'
+alias psb7='ssh -x rajan-01@psbuild-rhel7'
 
 # Enable X11 forwarding for ssh
 alias ssh='ssh -X -Y'
@@ -90,19 +90,28 @@ alias pcds_shortcuts='. /reg/g/pcds/tools/current/scripts/pcds_shortcuts.sh'
 alias whatamidoing='ps -aux | grep "rajan-01"'
 
 # Edit this file
-alias newshortcuts='emacs -nw /reg/neh/home4/rajan-01/.raj_shortcuts.sh'
+alias newshortcuts='emacs -nw /reg/neh/home/rajan-01/raj/shortcuts.sh'
 
 # Edit exports file
-alias newexports='emacs -nw /reg/neh/home4/rajan-01/.raj_exports.sh'
+alias newexports='emacs -nw /reg/neh/home/rajan-01/raj/exports.sh'
 
 # Read this file to stdout
-alias rajshortcuts='grep "alias " /reg/neh/home4/rajan-01/.raj_shortcuts.sh'
+alias rajshortcuts='grep "alias " /reg/neh/home/rajan-01/raj/shortcuts.sh'
 
 # Read exports file to stdout
-alias rajexports='grep "export" /reg/neh/home4/rajan-01/.raj_exports.sh'
+alias rajexports='grep "export" /reg/neh/home/rajan-01/raj/exports.sh'
 
 # Print charge codes that learned
 alias chargecodes='cat /reg/neh/home4/rajan-01/notes/lab_notes/charge_codes.txt'
 
 # XRT permission PV
 alias xrt?='caget PPS:XRT1:1:SUMACCESS'
+
+# Magic Ticket (mbrowne)
+alias px='xauth list | grep `echo $DISPLAY | sed -e s/\.0\$// -e s@localhost@$HOSTNAME/unix@` | sed -e "s/^/xauth add /"'
+
+# LCLS command aliases  ### SUPER HELPFUL ###
+alias epicsenv='. /reg/g/pcds/setup/epicsenv-3.14.12.sh'
+alias ana_env='. /reg/g/psdm/etc/ana_env.sh'
+alias plc_env='. /reg/g/pcds/setup/plcenv.sh'
+alias dev_env='. /reg/neh/home/trendahl/conda/dev.sh'
