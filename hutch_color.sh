@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Define PS1 here and color in ANSI num string as arg $1
+# Build PS1 here and color in ANSI num string as arg $1
 color(){
     export PS1="\[\033[0;${1}m\]\u\[\033[1;${1}m\]@\[\033[0;${1}m\]\h:\[\033[1;${1}m\]\w\[\033[m\]\$ "
 }
@@ -12,7 +12,7 @@ subnet_color(){
     fi
 }
 
-# Def ANSI color codes here
+# Define ANSI color codes here
 PURPLE='35'
 RED='31'
 GREEN='32'

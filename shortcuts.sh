@@ -60,12 +60,13 @@ alias mfxdaq='ssh mfx-daq'
 alias mfxopr='ssh mfxopr@mfx-control'
 
 # PS machines
-alias psrelay='ssh -x rajan-01@psrelay'
-alias psb5='ssh -x rajan-01@psbuild-rhel5'
-alias psb7='ssh -x rajan-01@psbuild-rhel7'
+alias psrelay='ssh rajan-01@psrelay'
+alias psb5='ssh rajan-01@psbuild-rhel5'
+alias psb6='ssh rajan-01@psbuild-rhel6'
+alias psb7='ssh rajan-01@psbuild-rhel7'
 
-# Enable X11 forwarding for ssh
-alias ssh='ssh -X -Y'
+# Enable trusted X11 forwarding for ssh
+alias ssh='ssh -Y'
 
 # Tells me what machine I'm on
 alias whereami='echo $HOSTNAME'
