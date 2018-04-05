@@ -32,6 +32,7 @@ subnet_color 43 $PURPLE
 subnet_color 25 $PURPLE
 # CXI
 subnet_color 68 $RED
+subnet_color 26 $RED
 # XPP
 subnet_color 38 $GREEN
 subnet_color 46 $GREEN
