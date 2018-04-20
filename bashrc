@@ -12,8 +12,7 @@ source /reg/neh/home/rajan-01/raj/functions.sh
 source /reg/neh/home/rajan-01/raj/exports.sh
 source /reg/neh/home/rajan-01/raj/hutch_color.sh
 
-# SDFGSFDG 
-#dfg
+
 
 
 
