@@ -1,7 +1,4 @@
 #!/bin/bash
-#################
-#  RAJAN STUFF  #
-#################
 
 # Import PCDS stuff (this is a soft link to PCDS engineering tools bashrc)
 source /reg/neh/home/rajan-01/raj/pcds
