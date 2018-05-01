@@ -81,10 +81,6 @@ alias pe='printenv'
 
 # Some more PCDS shortcuts
 alias lc='/reg/g/pcds/package/epics/3.14-dev/screens/edm/cxi/current/launch-control.sh'
-alias IocManager='/reg/g/pcds/pyps/apps/ioc/latest/IocManager &'
-alias daq_control='~cxiopr/daqconfig/scripts/daq_control'
-alias netconfig='/reg/common/tools/bin/netconfig'
-alias mfxhome='/reg/g/pcds/package/epics/3.14-dev/screens/edm/mfx/current/mfxhome'
 alias pcds_shortcuts='. /reg/g/pcds/tools/current/scripts/pcds_shortcuts.sh'
 
 # View processes being run by me on a machine
@@ -110,6 +106,9 @@ alias xrt?='caget PPS:XRT1:1:SUMACCESS'
 
 # Magic Ticket (mbrowne)
 alias px='xauth list | grep `echo $DISPLAY | sed -e s/\.0\$// -e s@localhost@$HOSTNAME/unix@` | sed -e "s/^/xauth add /"'
+
+# Magic IMS factory reset string
+alias magicstring='echo "^MFD^M ^d1000 ^MCK=0…^M ^d1000 ^J*FD^J^d1000^J*FDÌ^J"'
 
 # LCLS command aliases  ### SUPER HELPFUL ###
 alias epicsenv='. /reg/g/pcds/setup/epicsenv-3.14.12.sh'
