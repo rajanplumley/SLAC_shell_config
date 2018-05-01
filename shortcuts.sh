@@ -115,3 +115,7 @@ alias epicsenv='. /reg/g/pcds/setup/epicsenv-3.14.12.sh'
 alias ana_env='. /reg/g/psdm/etc/ana_env.sh'
 alias plc_env='. /reg/g/pcds/setup/plcenv.sh'
 alias dev_env='. /reg/neh/home/trendahl/conda/dev.sh'
+
+# Conda shortcuts
+alias rajconda='conda activate raj'
+alias norajconda='conda deactivate raj'
