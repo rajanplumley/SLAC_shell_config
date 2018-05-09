@@ -114,8 +114,8 @@ alias magicstring='echo "^MFD^M ^d1000 ^MCK=0…^M ^d1000 ^J*FD^J^d1000^J*FDÌ^J
 alias epicsenv='. /reg/g/pcds/setup/epicsenv-3.14.12.sh'
 alias ana_env='. /reg/g/psdm/etc/ana_env.sh'
 alias plc_env='. /reg/g/pcds/setup/plcenv.sh'
-alias dev_env='. /reg/neh/home/trendahl/conda/dev.sh'
 
 # Conda shortcuts
-alias rajconda='conda activate raj'
-alias norajconda='conda deactivate raj'
+alias rajconda='source /reg/neh/home/rajan-01/miniconda/etc/profile.d/conda.sh; conda activate raj'
+alias baseconda='source /reg/neh/home/rajan-01/miniconda/etc/profile.d/conda.sh; conda activate base'
+alias noconda='conda deactivate'
