@@ -23,7 +23,7 @@ export RAJ='/reg/neh/home/rajan-01/raj/'
 
 # PATH additions
 export PATH=$PATH:/reg/common/tools/bin
-export PATH=$PATH:/reg/g/pcds/engineering_tools/engineering_tools/scripts/
+export PATH=$PATH:/reg/g/pcds/engineering_tools/latest/scripts/
 export PATH=$PATH:/reg/neh/operator/xcsopr/bin
 export PATH=$PATH:/reg/neh/operator/xppopr/bin
 export PATH=$PATH:/reg/neh/operator/cxiopr/bin
