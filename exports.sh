@@ -31,6 +31,9 @@ export PATH=$PATH:/reg/neh/operator/mfxopr/bin
 export PATH=$PATH:$HOME/bin/pyscripts
 export PATH=$PATH:$HOME/bin/
 
+# Save my starting PATH so that I can return to it if it becomes mangled
+export PATH_BACKUP=$PATH
+
 # Pretty colors
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad

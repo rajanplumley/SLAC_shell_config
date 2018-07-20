@@ -119,3 +119,12 @@ alias plc_env='. /reg/g/pcds/setup/plcenv.sh'
 alias rajconda='source /reg/neh/home/rajan-01/miniconda/etc/profile.d/conda.sh; conda activate raj'
 alias baseconda='source /reg/neh/home/rajan-01/miniconda/etc/profile.d/conda.sh; conda activate base'
 alias noconda='conda deactivate'
+
+# Environment shortcuts
+alias resetpath='source /reg/neh/home/rajan-01/bin/path_reset'
+
+# Print some useful bash help
+alias bashhelp='cat ~/bin/bashhelp'
+
+# Use package manager python
+alias pypkg='export PSPKG_ROOT=/reg/g/pcds/pkg_mgr'

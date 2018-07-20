@@ -25,6 +25,6 @@ locate(){
 
 # Throw shit away
 toss(){
-    mv $1 /reg/neh/home/rajan-01/TRASH/
+    mv $1 /reg/neh/home/rajan-01/TRASH/$1
 }
 
