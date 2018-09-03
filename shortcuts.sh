@@ -66,7 +66,7 @@ alias psb6='ssh rajan-01@psbuild-rhel6'
 alias psb7='ssh rajan-01@psbuild-rhel7'
 
 # Enable trusted X11 forwarding for ssh
-alias ssh='ssh -Y'
+alias ssh='ssh -X -Y'
 
 # Tells me what machine I'm on
 alias whereami='echo $HOSTNAME'

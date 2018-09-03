@@ -3,7 +3,7 @@
 #  RAJAN FUNCTIONS  #
 #####################
 
-# Takes me back as many directories as specified like goback <num>.  Use back2top to return.
+# Takes me back as many directories as specified like goback <num>.  Use bak2top to return.
 gobak(){
     export LASTBACKDIR=$PWD;
     for ((i=0; i<$1; i++)); do
@@ -14,7 +14,7 @@ bak2top(){
     if [[ -n $LASTBACKDIR ]]; then
 	cd $LASTBACKDIR;
     else
-	echo "No top set.  Must 'goback' first";
+	echo "No top set.  Must 'gobak' first";
     fi
 }
 
@@ -26,5 +26,10 @@ locate(){
 # Throw shit away
 toss(){
     mv $1 /reg/neh/home/rajan-01/TRASH/$1
+}
+
+# See how long a host has been up
+host_uptime(){
+    ssh $1 uptime
 }
 

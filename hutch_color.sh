@@ -38,6 +38,7 @@ subnet_color 38 $GREEN
 subnet_color 46 $GREEN
 # MFX 
 subnet_color 62 $ORANGE
+subnet_color 24 $ORANGE
 # SXR
 subnet_color 39 $GRAY
 # AMO

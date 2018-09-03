@@ -2,9 +2,7 @@
 (setq auto-save-default nil) ; stop creating #autosave# files
 (setq comint-move-point-for-output 'this) ; move curser down on shell output
 (fset 'yes-or-no-p 'y-or-n-p) ; change "yes or no" to "y or n"
-(add-to-list 'custom-theme-load-path "~/themes/emacs-grayscale-theme")
-(add-to-list 'custom-theme-load-path "~/themes/zenburn-emacs")
-(load-file "~/themes/emacs-grayscale-theme/grayscale-theme.el")
+; (load-file "~/themes/emacs-grayscale-theme/grayscale-theme.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
