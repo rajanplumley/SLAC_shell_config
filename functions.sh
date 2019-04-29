@@ -33,3 +33,15 @@ host_uptime(){
     ssh $1 uptime
 }
 
+# Pull up GigE camera screen
+gige-expert-screen(){
+    epicsenv;
+    `caget -St $1:LAUNCH_EDM`;
+}
+
+# Go to experiment directory
+results_of(){
+    EXP=$1;
+    HUTCH=${EXP:0:3};
+    cd /reg/d/psdm/$HUTCH/$EXP/results;
+}

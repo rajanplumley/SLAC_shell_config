@@ -31,6 +31,9 @@ alias findfile='ls -d $PWD/* | grep '
 # recursive (use carefully)
 alias rfindfile='find . -print | grep '
 
+# xauth workaround
+alias px='xauth list | grep `echo $DISPLAY | sed -e s/\.0\$// -e s@localhost@$HOSTNAME/unix@` | sed -e "s/^/xauth add /"'
+
 # useful directories
 alias xcsarchdir='cd /reg/g/pcds/dist/pds/xcs/misc/'
 alias xcsscreens='cd /reg/g/pcds/package/screens/edm/xcs/'
@@ -61,6 +64,7 @@ alias mfxopr='ssh mfxopr@mfx-control'
 
 # PS machines
 alias psrelay='ssh rajan-01@psrelay'
+alias pslogin='ssh rajan-01@pslogin'
 alias psb5='ssh rajan-01@psbuild-rhel5'
 alias psb6='ssh rajan-01@psbuild-rhel6'
 alias psb7='ssh rajan-01@psbuild-rhel7'
@@ -128,3 +132,15 @@ alias bashhelp='cat ~/bin/bashhelp'
 
 # Use package manager python
 alias pypkg='export PSPKG_ROOT=/reg/g/pcds/pkg_mgr'
+
+# Analysis env
+alias anaenv='source /reg/g/psdm/etc/psconda.sh'
+
+# Virtual Windows 
+alias plcprog='xfreerdp -g 1916x1054 -u ${USER} --plugin cliprdr plcprog-console'
+
+# ls with file size in MB
+alias llmb='ls -l --block-size MB'
+
+# show all jobs running on psanaq
+alias psanaq='bjobs -q psanaq -w -u all'
