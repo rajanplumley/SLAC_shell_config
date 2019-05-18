@@ -10,6 +10,7 @@ gobak(){
 	cd ../;
     done;
 }
+
 bak2top(){
     if [[ -n $LASTBACKDIR ]]; then
 	cd $LASTBACKDIR;

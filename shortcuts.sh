@@ -139,8 +139,12 @@ alias anaenv='source /reg/g/psdm/etc/psconda.sh'
 # Virtual Windows 
 alias plcprog='xfreerdp -g 1916x1054 -u ${USER} --plugin cliprdr plcprog-console'
 
-# ls with file size in MB
+# ls with file size
 alias llmb='ls -l --block-size MB'
+alias llgb='ls -l --block-size GB'
 
 # show all jobs running on psanaq
 alias psanaq='bjobs -q psanaq -w -u all'
+
+# Simple PS1
+alias sp='export PS1="> "'
