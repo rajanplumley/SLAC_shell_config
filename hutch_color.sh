@@ -1,16 +1,21 @@
 #!/bin/bash
+#=============================================================
+# This script paints the `PS1` a single color based on the 
+# current subnet.  Requires the `SUBNET` shell environment
+# variable from /reg/g/pcds/setup/pcds_shortcuts.sh
+#
+# Source this file in your .bashrc
+#
+# Use `DEFAULT_COLOR` to pick the color for other/non-hutch
+# subnets
+#=============================================================
 
-# Build PS1 here and color in ANSI num string as arg $1
-color(){
-    export PS1="\[\033[0;${1}m\]\u\[\033[1;${1}m\]@\[\033[0;${1}m\]\h:\[\033[1;${1}m\]\w\[\033[m\]\$ "
-}
-
-# Colors by subnet num and ANSI num string (requires $SUBNET environment variable to be set!)
-subnet_color(){
-    if [[ $SUBNET == $1 ]]; then
-	color $2
-    fi
-}
+# Define subnets here
+XCS_SUBNET_LIST=(25 80 81 82 83)
+CXI_SUBNET_LIST=(26 68 69 70 71)
+XPP_SUBNET_LIST=(84 85 86 87 46)
+MFX_SUBNET_LIST=(24 72 73 74 75)
+MEC_SUBNET_LIST=(27 76 77 78 79)
 
 # Define ANSI color codes here
 PURPLE='35'
@@ -22,42 +27,30 @@ BLUE='94'
 WHITE='37'
 YELLOW='93'
 
-#####
-# If you want a generic $PS1 for other subnets set it here
-export PS1="\[\033[0;${WHITE}m\]\u\[\033[1;${WHITE}m\]@\[\033[0;${WHITE}m\]\h:\[\033[1;${WHITE}m\]\w\[\033[m\]\$ "
-#####
+# Set preferred default color for other subnets
+DEFAULT_COLOR=$WHITE
 
-# XCS
-subnet_color 25 $PURPLE
-subnet_color 80 $PURPLE
-subnet_color 81 $PURPLE
-subnet_color 82 $PURPLE
-subnet_color 83 $PURPLE
+# Build PS1 here , where `${1}` references the color argument.
+color(){
+    export PS1="\[\033[0;${1}m\]\u\[\033[1;${1}m\]@\[\033[0;${1}m\]\h:\[\033[1;${1}m\]\w\[\033[m\]\$ "
+}
 
-# CXI
-subnet_color 26 $RED
-subnet_color 68 $RED
-subnet_color 69 $RED
-subnet_color 70 $RED
-subnet_color 71 $RED
+# Colors by subnet
+subnet_color(){
+    if [[ $SUBNET == $1 ]]; then
+	color $2
+    fi
+}
 
-# XPP
-subnet_color 84 $GREEN
-subnet_color 85 $GREEN
-subnet_color 86 $GREEN
-subnet_color 87 $GREEN
-subnet_color 46 $GREEN
-
-# MFX 
-subnet_color 24 $ORANGE
-subnet_color 72 $ORANGE
-subnet_color 73 $ORANGE
-subnet_color 74 $ORANGE
-subnet_color 75 $ORANGE
-
-# MEC 
-subnet_color 27 $YELLOW
-subnet_color 76 $YELLOW
-subnet_color 77 $YELLOW
-subnet_color 78 $YELLOW
-subnet_color 79 $YELLOW
+# Main
+color $DEFAULT_COLOR
+for NUM in ${XCS_SUBNET_LIST[@]}; do
+    subnet_color $NUM $PURPLE; done
+for NUM in ${CXI_SUBNET_LIST[@]}; do
+    subnet_color $NUM $RED; done
+for NUM in ${XPP_SUBNET_LIST[@]}; do
+    subnet_color $NUM $GREEN; done
+for NUM in ${MFX_SUBNET_LIST[@]}; do
+    subnet_color $NUM $ORANGE; done
+for NUM in ${MEC_SUBNET_LIST[@]}; do
+    subnet_color $NUM $YELLOW; done

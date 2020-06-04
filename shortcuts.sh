@@ -3,6 +3,9 @@
 #  RAJAN BASH SHORTCUTS  #
 ##########################
 
+# Less letters
+alias gts='git status'
+
 # Python 3
 alias py3='source /reg/g/pcds/pyps/conda/py36env.sh'
 
@@ -138,7 +141,7 @@ alias anaenv='source /reg/g/psdm/etc/psconda.sh'
 
 # Virtual Windows 
 alias plcprog='xfreerdp -g 1916x1054 -u ${USER} --plugin cliprdr plcprog-console'
-
+alias plcproghome='xfreerdp -g 2560x1350 -u ${USER} --plugin cliprdr plcprog-console'
 alias plcproglaptop='xfreerdp -g 1400x850 -u ${USER} --plugin cliprdr plcprog-console'
 
 # ls with file size
